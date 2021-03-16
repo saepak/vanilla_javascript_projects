@@ -23,16 +23,16 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 30px;
     max-width: 100%;
     width: 350px;
+    height: 70px;
   }
   
   .progress-container::before {
     content: '';
     background-color: var(--line-border-empty);
     position: absolute;
-    top: 50%;
+    top: 15px;
     left: 0;
     transform: translateY(-50%);
     height: 4px;
@@ -43,13 +43,23 @@
   .progress {
     background-color: var(--line-border-fill);
     position: absolute;
-    top: 50%;
+    top: 15px;
     left: 0;
     transform: translateY(-50%);
     height: 4px;
     width: 0%;
-    z-index: -1;
+    z-index: 1;
     transition: 0.4s ease;
+  }
+
+  .circle-box {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
   }
   
   .circle {

@@ -3,6 +3,8 @@ const prev = document.getElementById('prev')
 const next = document.getElementById('next')
 const circles = document.querySelectorAll('.circle')
 
+
+
 let currentActive = 1
 
 next.addEventListener('click', () => {
@@ -15,6 +17,8 @@ next.addEventListener('click', () => {
     update()
 })
 
+
+
 prev.addEventListener('click', () => {
     currentActive--
 
@@ -25,7 +29,7 @@ prev.addEventListener('click', () => {
     update()
 })
 
-function update() {
+const update = () => {
     circles.forEach((circle, idx) => {
         if(idx < currentActive) {
             circle.classList.add('active')
@@ -47,3 +51,4 @@ function update() {
         next.disabled = false
     }
 }
+

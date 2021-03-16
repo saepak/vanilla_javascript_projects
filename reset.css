@@ -118,12 +118,12 @@ select {
   box-shadow: 1px 1px 4px rgba(99, 99, 99, 0.1);
 }
 
-nav {
+.navigation {
   width: 80%;
   margin: 0 auto;
 }
 
-nav ul {
+.navigation ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -133,7 +133,7 @@ nav ul {
   background-color: white;
 }
 
-nav ul li {
+.navigation ul li {
   width: 25%;
   height: 90px;
   display: flex;
@@ -142,11 +142,11 @@ nav ul li {
   border-bottom: 1px dashed #ebebeb;
 }
 
-nav ul li:nth-child(4n) {
+.navigation ul li:nth-child(4n) {
   border-right: none;
 }
 
-nav ul li a {
+.navigation ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,7 +157,7 @@ nav ul li a {
 
 @media screen and (max-width: 700px) {
 
-  nav {
+  .navigation {
     width: 95%;
   }
 
@@ -167,16 +167,16 @@ nav ul li a {
     line-height: 1.2;
   }
 
-  nav ul li {
+  .navigation ul li {
     width: 33.33%;
     height: 90px;
   }
 
-  nav ul li:nth-child(3n) {
+  .navigation ul li:nth-child(3n) {
     border-right: none;
   }
 
-  nav ul li:nth-child(4n) {
+  .navigation ul li:nth-child(4n) {
     border-right: 1px dashed #ebebeb;
   }
 

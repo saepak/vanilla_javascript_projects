@@ -12,14 +12,17 @@
     transition: transform 0.5s linear;
     width: 100vw;
     min-height: 100vh;
-    padding: 50px;
+    padding: 10px 50px 50px;
     position: relative;
+}
+
+.container h1 {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
 }
   
 .home-btn-nav {
-    position: absolute;
-    top: 20px;
-    right: 40px;
+    margin: 10px 0 50px;
     display: inline-block;
     padding: 5px 20px;
     border-radius: 25px;
@@ -125,11 +128,7 @@ nav ul li + li + li {
 
 .content {
     max-width: 1000px;
-    margin: 50px auto;
-}
-
-.content h1 {
-    margin: 0;
+    margin: 30px auto;
 }
 
 .content p {

@@ -68,8 +68,7 @@ h1 {
 
 .split.left {
   left: 0;
-  background: url('./../img/ps.jpeg');
-  background-repeat: no-repeat;
+  background: url('./../img/ps.jpeg') no-repeat;
   background-size: cover;
 }
 
@@ -83,8 +82,7 @@ h1 {
 
 .split.right {
   right: 0;
-  background: url('./../img/xbox.jpeg');
-  background-repeat: no-repeat;
+  background: url('./../img/xbox.jpeg') no-repeat;
   background-size: cover;
 }
 

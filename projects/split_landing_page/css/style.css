@@ -8,6 +8,13 @@
   --speed: 1000ms;
 }
 
+.home-btn {
+  position: fixed;
+  top: 20px; 
+  right: 20px;
+  z-index: 999;
+}
+
 .landing_wrapper {
   height: 100vh;
   overflow: hidden;

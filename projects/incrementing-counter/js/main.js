@@ -1,54 +1,21 @@
-const progress = document.getElementById('progress')
-const prev = document.getElementById('prev')
-const next = document.getElementById('next')
-const circles = document.querySelectorAll('.circle')
+const counters = document.querySelectorAll('.counter')
 
+counters.forEach(counter => {
+    counter.innerText = '0'
 
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target')
+        const c = +counter.innerText
 
-let currentActive = 1
+        const increment = target / 200
 
-next.addEventListener('click', () => {
-    currentActive++
-
-    if(currentActive > circles.length) {
-        currentActive = circles.length
-    }
-
-    update()
-})
-
-
-
-prev.addEventListener('click', () => {
-    currentActive--
-
-    if(currentActive < 1) {
-        currentActive = 1
-    }
-
-    update()
-})
-
-const update = () => {
-    circles.forEach((circle, idx) => {
-        if(idx < currentActive) {
-            circle.classList.add('active')
+        if(c < target) {
+            counter.innerText = `${Math.ceil(c + increment)}`
+            setTimeout(updateCounter, 1)
         } else {
-            circle.classList.remove('active')
+            counter.innerText = target
         }
-    })
-
-    const actives = document.querySelectorAll('.active')
-
-    progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
-
-    if(currentActive === 1) {
-        prev.disabled = true
-    } else if(currentActive === circles.length) {
-        next.disabled = true
-    } else {
-        prev.disabled = false
-        next.disabled = false
     }
-}
 
+    updateCounter()
+})

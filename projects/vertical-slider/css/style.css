@@ -9,6 +9,13 @@ body {
   height: 100vh;
 }
 
+.home-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
+}
+
 .slider-container {
   position: relative;
   overflow: hidden;

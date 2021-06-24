@@ -1,0 +1,23 @@
+
+h1 {
+  padding-top: 100px;
+}
+
+.speed {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 50px;
+}
+
+input {
+  width: 50px;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}

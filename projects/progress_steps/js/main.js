@@ -4,28 +4,21 @@ const next = document.getElementById('next')
 const circles = document.querySelectorAll('.circle')
 
 
-
 let currentActive = 1
 
 next.addEventListener('click', () => {
     currentActive++
-
     if(currentActive > circles.length) {
         currentActive = circles.length
     }
-
     update()
 })
 
-
-
 prev.addEventListener('click', () => {
     currentActive--
-
     if(currentActive < 1) {
         currentActive = 1
     }
-
     update()
 })
 
@@ -39,7 +32,6 @@ const update = () => {
     })
 
     const actives = document.querySelectorAll('.active')
-
     progress.style.width = (actives.length - 1) / (circles.length - 1) * 100 + '%'
 
     if(currentActive === 1) {

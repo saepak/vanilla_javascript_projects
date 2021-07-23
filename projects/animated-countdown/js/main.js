@@ -19,6 +19,7 @@ function resetDOM() {
 
 function runAnimation() {
   nums.forEach((num, idx) => {
+      
     const nextToLast = nums.length - 1
 
     num.addEventListener('animationend', (e) => {

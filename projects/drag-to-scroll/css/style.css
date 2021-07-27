@@ -1,19 +1,27 @@
 
-.scroll-wrapper {
-  min-height: 70vh;
+
+body {
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
+  flex-direction: column;
   font-size: 20px;
   margin: 0;
+  background-color: #f2f2f2;
+}
+
+header {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+header a {
+  font-size: 16px;
 }
 
 .items {
   height: 800px;
   padding: 100px;
   width: 100%;
-  border: 1px solid white;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;

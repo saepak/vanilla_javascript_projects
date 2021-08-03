@@ -1,4 +1,10 @@
 
+.home-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
 .panel-wrapper {
   width: 100vw;
   height: 100vh;

@@ -63,13 +63,13 @@ h2 {
 }
 
 .plates label:before {
-  content: "🌮";
+  content: "◻️";
   margin-right: 10px;
 }
 
-/* .plates input:checked + label:before {
+.plates input:checked + label:before {
   content: "🌮";
-} */
+}
 
 .add-items {
   margin-top: 20px;

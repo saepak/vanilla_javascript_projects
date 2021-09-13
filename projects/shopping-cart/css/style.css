@@ -59,9 +59,10 @@
 }
 
 .container {
-  max-width: 900px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 0 1.5em;
+  margin-top: 50px;
 }
 
 .section-header {
@@ -86,9 +87,6 @@
   padding: .25em 0;
 }
 
-.container {
-  margin-top: 50px;
-}
 
 .main-footer-container {
   display: flex;
@@ -190,7 +188,7 @@
 }
 
 .shop-item {
-  margin: 30px 15px;
+  margin: 30px 20px;
 }
 
 .shop-item-title {

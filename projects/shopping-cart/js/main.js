@@ -1,14 +1,71 @@
+const ready = () => {
+    const removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    for (let i = 0; i < removeCartItemButtons.length; i++) {
+        let button = removeCartItemButtons[i]
+        button.addEventListener('click', removeCartItem)
+    }
 
-const removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    const quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    for(let i = 0; i < quantityInputs.length; i++){
+        let input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged)
+    }
 
-for(let i = 0; i < removeCartItemButtons.length; i++) {
-    let button = removeCartItemButtons[i]
-    button.addEventListener('click', (event)=>{
-       let buttonClicked = event.target
-       buttonClicked.parentElement.parentElement.remove()
-       updateCartTotal()
-    })
+    const addToCartButtons = document.getElementsByClassName('shop-item-button')
+    for(let i = 0; i < addToCartButtons.length; i++){
+        let button = addToCartButtons[i]
+        button.addEventListener('click', addToCartClicked)
+    }
 }
+
+const quantityChanged = (event) => {
+    let input = event.target
+    if(isNaN(input.value) || input.value <= 0){
+        input.value = 1
+    }
+    updateCartTotal()
+}
+
+const removeCartItem = (event) => {
+    let buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    // updateCartTotal()
+}
+
+const addToCartClicked = (event) => {
+    let button = event.target
+    let shopItem = button.parentElement.parentElement
+    let title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+    let price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    addItemToCart(title, price)
+}
+
+const addItemToCart = (title, price) => {
+    let cartRow = document.createElement('div')
+    cartRow.classList.add('cart-row')
+    cartRow.innerText = title
+    let cartItems = document.getElementsByClassName('cart-items')[0]
+    let cartRowContents = `
+        <div class="cart-item cart-column">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        <span class="cart-price cart-column">$${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">X</button>
+        </div>
+    `
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
+}
+
+
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
+}
+
 
 const updateCartTotal = () => {
 
@@ -24,6 +81,7 @@ const updateCartTotal = () => {
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
+    // ㄷ두자자리  소소수수점  만만듦듦
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
 
 }

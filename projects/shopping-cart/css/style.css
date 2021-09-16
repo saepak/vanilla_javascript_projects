@@ -59,7 +59,7 @@
 }
 
 .container {
-  max-width: 720px;
+  width: 720px;
   margin: 0 auto;
   padding: 0 1.5em;
   margin-top: 50px;
@@ -110,7 +110,7 @@
 .btn {
   text-align: center;
   vertical-align: middle;
-  padding: .67em .67em;
+  padding: .50em .50em;
   cursor: pointer;
 }
 
@@ -187,8 +187,43 @@
   max-width: 19%;
 }
 
+.shop-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 .shop-item {
-  margin: 30px 20px;
+  width: 48%;
+  height: 280px;
+  margin: 1%;
+  position: relative;
+  background-size: cover;
+}
+
+.shop-item1 {
+  background-image: url("https://source.unsplash.com/900x900/?song");
+}
+
+.shop-item2 {
+  background-image: url("https://source.unsplash.com/900x900/?concert");
+}
+
+.shop-item3 {
+  background-image: url("https://source.unsplash.com/900x900/?sing");
+}
+
+.shop-item4 {
+  background-image: url("https://source.unsplash.com/900x900/?performance");
+}
+
+.shop-item5 {
+  background-image: url("https://source.unsplash.com/900x900/?t-shirt");
+}
+
+.shop-item6 {
+  background-image: url("https://source.unsplash.com/900x900/?coffee cup");
 }
 
 .shop-item-title {
@@ -199,16 +234,23 @@
   font-size: 1.2em;
   color: #333;
   margin-bottom: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
-.shop-item-image {
-  height: 250px;
-}
 
 .shop-item-details {
   display: flex;
   align-items: center;
   padding: 5px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background: white;
+  border-radius: 5px;
 }
 
 .shop-item-price {
@@ -217,11 +259,6 @@
   padding-right: 10px;
 }
 
-.shop-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 
 .cart-container {
   position: fixed;

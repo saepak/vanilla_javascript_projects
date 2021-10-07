@@ -14,17 +14,20 @@
 }
 
 .draggable-list {
+  width: 100%;
   border: 1px solid var(--border-color);
   color: var(--text-color);
   padding: 0;
   list-style-type: none;
   background-color: white;
+  margin: 40px 0 20px 0;
 }
 
 .draggable-list li {
   background-color: #fff;
   display: flex;
   flex: 1;
+  position: relative;
 }
 
 .draggable-list li:not(:last-of-type) {
@@ -58,7 +61,7 @@
 }
 
 .draggable {
-  cursor: pointer;
+  cursor: grab;
   display: flex;
   align-items: center;
   justify-content: space-between;
